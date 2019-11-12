@@ -24,12 +24,16 @@ function App() {
 
             <Col md={1}>
               <NavLink exact to="/">
-                <Button variant="outline-secondary">Home</Button>
+                {/* <Button variant="outline-secondary">Home</Button> */}
+                Home
               </NavLink>
             </Col>
             <Col md={2}>
-              <NavLink exact to="/our-history">
-                <Button variant="outline-secondary">Our History</Button>
+              <NavLink to="/our-history" className='History' activeClassName='active' activeStyle={{
+                color: "red"
+              }}>
+                {/* <Button variant="outline-secondary">Our History</Button> */}
+                Our History
               </NavLink>
             </Col>
           </Row>
@@ -41,7 +45,7 @@ function App() {
               </Route>
               <Route path='/our-history'>
                 <History />
-          </Route>
+              </Route>
             </Switch>
           </Row>
         </BrowserRouter>
